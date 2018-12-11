@@ -1,6 +1,6 @@
 echo Building Debian package ...
 
-./buildDebianDaemon.sh amd64
+./buildDebianDaemon.sh armhf
 
 exit 0
 
