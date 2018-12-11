@@ -3,6 +3,6 @@ Description=NSDev service
 After=multi-user.target network.target
 [Service]
 Type=simple
-ExecStart=/usr/bin/nsdev-daemon.sh
+ExecStart=nsdev-daemon
 [Install]
 WantedBy=multi-user.target
