@@ -1,0 +1,8 @@
+[Unit]
+Description=NSDev service
+After=multi-user.target network.target
+[Service]
+Type=simple
+ExecStart=/usr/bin/nsdev-daemon.sh
+[Install]
+WantedBy=multi-user.target

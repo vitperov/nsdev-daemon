@@ -1,0 +1,14 @@
+Source: NAME
+Version: VERSION
+Priority: optional
+Maintainer: Vitaly Perov <vitperov@gmail.com>
+Build-Depends: debhelper (>= 10)
+Standards-Version: 4.1.2
+Package: NAME
+Section: misc
+Architecture: ARCH
+Depends: bash (>= 4.0)
+Description: Simple daemon than runs console command, specified in config file
+ <b> nsdev-daemon </b> - Originally the daemon was designed to run
+ NSDev at system start, but you can change command-line in 
+ configuration file and run any command you want.

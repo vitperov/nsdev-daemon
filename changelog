@@ -1,0 +1,6 @@
+nsdev-daemon (18.12.0) UNRELEASED; urgency=medium
+
+  * First attempt to build debian package
+
+ -- Vitaly Perov <vitperov@gmail.com>  Tue, 11 Dec 2018 15:21:41 +0300
+
