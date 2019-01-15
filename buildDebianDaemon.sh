@@ -9,7 +9,7 @@ INSTALL_DIR=/lib/systemd/system/
 CONTROL=control
 CHANGELOG=changelog
 COPYRIGHT=copyright
-VERSION=19.01.01
+VERSION=19.01.02
 ROOT_DIR=`pwd`
 
 ARCH=$1
@@ -48,8 +48,8 @@ mv $PACKAGE_CTRL_DIR/changelog.gz $PACKAGE_DOC_DIR/changelog.gz
 cp $ROOT_DIR/$COPYRIGHT $PACKAGE_DOC_DIR/
 
 echo "/etc/$SERVICE_CFG" > $PACKAGE_CTRL_DIR/conffiles
-echo "sudo systemctl daemon-reload" > $PACKAGE_CTRL_DIR/triggers
-echo "sudo systemctl start $SERVICE_NAME" >> $PACKAGE_CTRL_DIR/triggers
+#echo "sudo systemctl daemon-reload" > $PACKAGE_CTRL_DIR/triggers
+#echo "sudo systemctl start $SERVICE_NAME" >> $PACKAGE_CTRL_DIR/triggers
 
 cd $ROOT_DIR/$BUILD_DIR/package-"$ARCH"/
 fakeroot dpkg-deb -b $PROJ_NAME
