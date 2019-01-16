@@ -4,7 +4,7 @@ After=multi-user.target network.target
 [Service]
 Type=simple
 EnvironmentFile=/etc/systemd/system/nsdev-daemon.cfg
-ExecStart=/bin/bash -a -c '${DAEMON_EXE} ${DAEMON_OPTIONS}'
+ExecStart=/bin/bash -a -c 'cd ${DAEMON_WRK_DIR} && ${DAEMON_EXE} ${DAEMON_OPTIONS}'
 Restart=always
 RestartSec=3
 [Install]

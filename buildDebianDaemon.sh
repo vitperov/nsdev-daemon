@@ -10,7 +10,7 @@ CFG_DIR=/etc/systemd/system/
 CONTROL=control
 CHANGELOG=changelog
 COPYRIGHT=copyright
-VERSION=19.01.17
+VERSION=19.01.19
 ROOT_DIR=`pwd`
 
 ARCH=$1
