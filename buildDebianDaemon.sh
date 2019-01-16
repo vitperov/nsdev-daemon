@@ -9,7 +9,7 @@ INSTALL_DIR=/lib/systemd/system/
 CONTROL=control
 CHANGELOG=changelog
 COPYRIGHT=copyright
-VERSION=19.01.02
+VERSION=19.01.16
 ROOT_DIR=`pwd`
 
 ARCH=$1

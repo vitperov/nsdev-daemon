@@ -2,8 +2,9 @@
 Description=NSDev service
 After=multi-user.target network.target
 [Service]
+Type=simple
 EnvironmentFile=/etc/nsdev-daemon.cfg
-ExecStart=${DAEMON_EXE} ${DAEMON_OPTIONS}
+ExecStart=/bin/bash -a -c '${DAEMON_EXE} ${DAEMON_OPTIONS}'
 Restart=always
 RestartSec=3
 [Install]
