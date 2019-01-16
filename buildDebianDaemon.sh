@@ -6,10 +6,11 @@ BUILD_DIR=build
 SERVICE_NAME=nsdev.service
 SERVICE_CFG=nsdev-daemon.cfg
 INSTALL_DIR=/lib/systemd/system/
+CFG_DIR=/etc/systemd/system/
 CONTROL=control
 CHANGELOG=changelog
 COPYRIGHT=copyright
-VERSION=19.01.16
+VERSION=19.01.17
 ROOT_DIR=`pwd`
 
 ARCH=$1
@@ -25,7 +26,7 @@ chmod -R 777 $PACKAGE_DIR
 rm -rf $PACKAGE_DIR
 
 mkdir -p $PACKAGE_CTRL_DIR
-mkdir -p $PACKAGE_DIR/etc
+mkdir -p $PACKAGE_DIR/$CFG_DIR
 mkdir -p $PACKAGE_DIR/$INSTALL_DIR
 mkdir -p $PACKAGE_DOC_DIR
 
@@ -35,10 +36,10 @@ sed -i "s/NAME/$PROJ_NAME/g" control
 sed -i "s/VERSION/$VERSION/g" control
 sed -i "s/ARCH/$ARCH/g" control
 
-cp $ROOT_DIR/$SERVICE_CFG $PACKAGE_DIR/etc/
+cp $ROOT_DIR/$SERVICE_CFG $PACKAGE_DIR/$CFG_DIR
 cp $ROOT_DIR/$SERVICE_NAME $PACKAGE_DIR/$INSTALL_DIR
 
-chmod 644 $PACKAGE_DIR/etc/$SERVICE_CFG
+chmod 644 $PACKAGE_DIR/$CFG_DIR/$SERVICE_CFG
 chmod 644 $PACKAGE_DIR/$INSTALL_DIR/$SERVICE_NAME
 
 cp $ROOT_DIR/$CHANGELOG $PACKAGE_CTRL_DIR/
