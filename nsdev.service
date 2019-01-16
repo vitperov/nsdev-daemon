@@ -4,6 +4,8 @@ After=multi-user.target network.target
 [Service]
 Type=simple
 EnvironmentFile=/etc/systemd/system/nsdev-daemon.cfg
+ExecStartPre=/bin/bash -a -c '${DAEMON_START_PRE}'
+#ExecStartPre=/bin/bash -a -c 'date > /root/prestart.txt'
 ExecStart=/bin/bash -a -c 'cd ${DAEMON_WRK_DIR} && ${DAEMON_EXE} ${DAEMON_OPTIONS}'
 Restart=always
 RestartSec=3
